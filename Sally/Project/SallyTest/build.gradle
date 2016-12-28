@@ -11,6 +11,10 @@ buildscript {
         // in the individual module build.gradle files
     }
 }
+android {
+    compileSdkVersion 19
+    buildToolsVersion '19.0.1'
+    }
 
 allprojects {
     repositories {
