@@ -39,6 +39,13 @@ android {
             output.outputFile = new File( output.outputFile.parent,output.outputFile.name.replace(".apk", "-${variant.versionName}.apk"))
         }
     }
+	    defaultConfig {
+        applicationId "com.example.z.sallytest"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        def env = System.getenv()
+     }
    
 }
 
