@@ -7,19 +7,18 @@ android {
     }
     def jenkinsBuild = System.getenv("BUILD_NUMBER") ?: "10"   
     defaultConfig {
-        .....
-        versionCode jenkinsBuild.toInteger()
+             versionCode jenkinsBuild.toInteger()
         versionName "2.0.0."+ versionCode    }
     buildTypes {
         release {
-            minifyEnabled false
+           it minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         qa {
-            ..
+            
         }
         debug {
-           ...
+           
         }
     }
     applicationVariants.all { variant ->
