@@ -3,7 +3,6 @@ apply plugin: 'com.android.application'
 android {
     signingConfigs {
         release {
-           .....
         }
     }
     def jenkinsBuild = System.getenv("BUILD_NUMBER") ?: "10"   
@@ -13,7 +12,7 @@ android {
         versionName "2.0.0."+ versionCode    }
     buildTypes {
         release {
-                       minifyEnabled false
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         qa {
