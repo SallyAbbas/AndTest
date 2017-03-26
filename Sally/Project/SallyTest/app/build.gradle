@@ -9,6 +9,7 @@ android {
     }
     def jenkinsBuild = System.getenv("BUILD_NUMBER") ?: "10"   
     defaultConfig {
+    manifestPlaceholders = [HOCKEYAPP_APP_ID: "1f0d25cc0ee34dcab2bab0de14c6c3f0"]
              versionCode jenkinsBuild.toInteger()
         versionName "2.0.0."+ versionCode    }
     buildTypes {
