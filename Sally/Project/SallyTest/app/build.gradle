@@ -60,4 +60,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.3.0'
     compile 'com.android.support:design:23.3.0'
     compile 'net.hockeyapp.android:HockeySDK:4.1.3'
+     compile 'com.deploygate:sdk:3.1'
 }
