@@ -23,8 +23,14 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+File sdCard = Environment.getExternalStorageDirectory();
+String fileStr = sdCard.getAbsolutePath() + "/Download";// + "app-release.apk";
+File file = new File(fileStr, "app-release.apk");
+Intent promptInstall = new Intent(Intent.ACTION_VIEW).setDataAndType(Uri.fromFile(file),
+                        "application/vnd.android.package-archive");
 
-                startActivity(new Intent(MainActivity.this,Main2Activity.class));
+startActivity(promptInstall);
+                //startActivity(new Intent(MainActivity.this,Main2Activity.class));
 
 
             }
